@@ -72,7 +72,7 @@ urlpatterns = [url(r'^$', views.index, name='index'),\
 		f = open ('views.py','w')
 		f.write('from django.http import HttpResponse\n\
 def index(request):\n\
-	return HttpReponse("Okay!")')
+	return HttpResponse("Okay!")')
 		f.close()
 		os.chdir(sysargs.path+"/"+sysargs.args_list[1])
 		os.system("python3 manage.py migrate")
